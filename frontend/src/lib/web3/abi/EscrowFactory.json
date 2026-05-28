@@ -1,0 +1,51 @@
+[
+  { "inputs": [], "stateMutability": "nonpayable", "type": "constructor" },
+  {
+    "anonymous": false,
+    "inputs": [
+      { "indexed": true, "internalType": "uint256", "name": "agreementId", "type": "uint256" },
+      { "indexed": true, "internalType": "address", "name": "agreementAddress", "type": "address" },
+      { "indexed": true, "internalType": "address", "name": "client", "type": "address" },
+      { "indexed": false, "internalType": "address", "name": "freelancer", "type": "address" },
+      { "indexed": false, "internalType": "address", "name": "arbitrator", "type": "address" },
+      { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" },
+      { "indexed": false, "internalType": "string", "name": "jobHash", "type": "string" }
+    ],
+    "name": "AgreementCreated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [{ "indexed": true, "internalType": "address", "name": "arbitrator", "type": "address" }],
+    "name": "ArbitratorApproved",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [{ "indexed": true, "internalType": "address", "name": "arbitrator", "type": "address" }],
+    "name": "ArbitratorRevoked",
+    "type": "event"
+  },
+  { "inputs": [], "name": "owner", "outputs": [{ "internalType": "address", "name": "", "type": "address" }], "stateMutability": "view", "type": "function" },
+  { "inputs": [], "name": "agreementCount", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" },
+  { "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "name": "agreements", "outputs": [{ "internalType": "address", "name": "", "type": "address" }], "stateMutability": "view", "type": "function" },
+  { "inputs": [{ "internalType": "address", "name": "", "type": "address" }], "name": "approvedArbitrators", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "view", "type": "function" },
+  { "inputs": [{ "internalType": "address", "name": "_arbitrator", "type": "address" }], "name": "approveArbitrator", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
+  { "inputs": [{ "internalType": "address", "name": "_arbitrator", "type": "address" }], "name": "revokeArbitrator", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
+  { "inputs": [{ "internalType": "address", "name": "_arbitrator", "type": "address" }], "name": "isArbitratorApproved", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "view", "type": "function" },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_freelancer", "type": "address" },
+      { "internalType": "address", "name": "_arbitrator", "type": "address" },
+      { "internalType": "uint256", "name": "_amount", "type": "uint256" },
+      { "internalType": "string",  "name": "_jobHash", "type": "string" }
+    ],
+    "name": "createAgreement",
+    "outputs": [
+      { "internalType": "uint256", "name": "agreementId", "type": "uint256" },
+      { "internalType": "address", "name": "agreementAddress", "type": "address" }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

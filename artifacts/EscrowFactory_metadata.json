@@ -1,0 +1,282 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "agreementId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "agreementAddress",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "client",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "freelancer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "arbitrator",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "jobHash",
+						"type": "string"
+					}
+				],
+				"name": "AgreementCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "arbitrator",
+						"type": "address"
+					}
+				],
+				"name": "ArbitratorApproved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "arbitrator",
+						"type": "address"
+					}
+				],
+				"name": "ArbitratorRevoked",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "agreementCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "agreements",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_arbitrator",
+						"type": "address"
+					}
+				],
+				"name": "approveArbitrator",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "approvedArbitrators",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_freelancer",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_arbitrator",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_jobHash",
+						"type": "string"
+					}
+				],
+				"name": "createAgreement",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "agreementId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "agreementAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_arbitrator",
+						"type": "address"
+					}
+				],
+				"name": "isArbitratorApproved",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_arbitrator",
+						"type": "address"
+					}
+				],
+				"name": "revokeArbitrator",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/EscrowFactory.sol": "EscrowFactory"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/EscrowAgreement.sol": {
+			"keccak256": "0x010ed69cc22e4535c8f4c8dfc908e224a67fa56d90f3d550cff34c39eb30ae56",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2f2f9b45e522bf99edaefda188ce169c68f6150c3393ccfac85c6bf930fa48ae",
+				"dweb:/ipfs/QmRCr46mXQTdhaRX7A389kqjbYhjBhg1xijemLUx5CW78Q"
+			]
+		},
+		"contracts/EscrowFactory.sol": {
+			"keccak256": "0xdf27bd6c323c110348f8b1f14aaa3170ae502fdbf8208e0988016c8af99cb237",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://572b7114440cc0f2656ea96412f65e252c18de7494ca780e1561122d80dafbae",
+				"dweb:/ipfs/QmeLuNVzRk8she18P5T7FwjbLw9EzzXfpb6b4h2t9CmwQh"
+			]
+		}
+	},
+	"version": 1
+}
